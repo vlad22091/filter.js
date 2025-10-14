@@ -1,0 +1,23 @@
+const toFilter = [3, '12', 4, null, 5, 8, '', 12]
+
+function filtrovane(arr = [] ) {
+    console.log(arr)
+    const result  = []
+    if(!Array.isArray(arr)) {
+        return result;
+    }
+    for(let i = 0;i < arr.length;i++)
+    {
+        if(typeof arr[i] === 'number' )
+        {
+            result.push(arr[i])
+        } 
+        if(typeof arr[i] === 'string' && parseInt(arr[i], 10))
+        {
+            result.push(arr[i])
+        }
+    }
+    return result;
+}
+
+console.log(filtrovane(toFilter))
